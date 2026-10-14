@@ -33,13 +33,16 @@ TargetEncoder for title and locality (high cardinality)
 Outlier treatment: Applied capping to ensure data distributions remain realistic without distortion.
 
 #  Models Tried and their Results
-Model	R² Score (Test)
-Linear Regression	~0.78
-SGD Regressor	~0.80
-Decision Tree Regressor	~0.84
-Random Forest Regressor	~0.87
-Support Vector Regressor	~0.85
-XGBoost Regressor	0.91 (Best)
+
+| Model | R² Score (Test) |
+|---|---:|
+| Linear Regression | ~0.78 |
+| SGD Regressor | ~0.80 |
+| Decision Tree Regressor | ~0.84 |
+| Random Forest Regressor | ~0.87 |
+| Support Vector Regressor (SVR) | ~0.85 |
+| XGBoost Regressor | **~0.91 (Best)** |
+
 
 Training vs. Test R² scores for XGBoost are close (0.9138 vs. 0.9127), showing no major overfitting.
 XGBoost consistently outperformed other models by capturing complex feature interactions and handling skewness/outliers effectively.
@@ -51,7 +54,7 @@ Bar plots for top localities, property types, and furnishing categories.
 
 # How to Run
 Clone the repo:
-git clone https://github.com/yourusername/mumbai-house-price-predictor.git
+git clone https://github.com/anu-006/mumbai-house-price-predictor.git
 
 Install dependencies:
 pip install -r requirements.txt
